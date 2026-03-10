@@ -1,0 +1,14 @@
+.vercel
+
+# These are separate GitHub repos — don't nest them here
+AI-ASSISTANT-CLAUDE/
+AI-ASSISTANT-ANTIGRAVITY/
+AI-ASSISTANT-CURSOR/
+AI-ASSISTANT-GITHUB-COPILOT/
+AI-ASSISTANT-OPENCODE/
+
+# Standard
+node_modules/
+.DS_Store
+.env
+*.log
