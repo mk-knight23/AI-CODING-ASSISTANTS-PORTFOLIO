@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ECOSYSTEM | Kazi Musharraf</title>
-  <meta name="description" content="Master Hub for the AI Assistant Ecosystem by Kazi Musharraf. Unified orchestration of Claude, Cursor, and more.">
+  <title>ECOSYSTEM HUB | Kazi Musharraf</title>
+  <meta name="description" content="AI Assistant Ecosystem Master Hub by Kazi Musharraf. Prismatic orchestration of all agentic power.">
   
-  <!-- UI UX Pro Max: Font & Style CDN -->
+  <!-- UI UX Pro Max: Spectrum Standard CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
@@ -23,29 +22,27 @@
           },
           colors: {
             hub: {
-              black: '#0A0A0A',
-              surface: '#121212',
-              primary: '#3B82F6',
-              secondary: '#10B981',
-              accent: '#8B5CF6',
-              warning: '#F59E0B',
-              danger: '#EF4444',
+              active: '#FACC15',
+              thinking: '#10B981',
+              craft: '#FB923C',
+              verify: '#84CC16',
+              raw: '#64748B',
+              bg: '#FFFFFF',
             }
           },
           animation: {
-            'spin-slow': 'spin 12s linear infinite',
-            'float-parallax': 'parallax 10s ease-in-out infinite',
-            'mesh': 'mesh 30s linear infinite',
+            'mesh-slow': 'mesh 15s linear infinite',
+            'float-soft': 'float 8s ease-in-out infinite',
           },
           keyframes: {
-            parallax: {
-              '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
-              '50%': { transform: 'translateY(-30px) rotate(2deg)' },
-            },
             mesh: {
               '0%': { backgroundPosition: '0% 50%' },
               '50%': { backgroundPosition: '100% 50%' },
               '100%': { backgroundPosition: '0% 50%' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0) scale(1)' },
+              '50%': { transform: 'translateY(-20px) scale(1.05)' },
             }
           }
         }
@@ -54,61 +51,69 @@
   </script>
 
   <style>
-    body { background-color: #0A0A0A; color: #FFFFFF; }
+    body { background-color: #FFFFFF; color: #0F172A; overflow-x: hidden; }
     .glass-spectrum {
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
     }
-    .spectrum-mesh {
-      background: linear-gradient(45deg, #3B82F6, #10B981, #F59E0B, #EF4444, #8B5CF6);
+    .mesh-gradient {
+      background: linear-gradient(-45deg, #FACC15, #10B981, #FB923C, #84CC16, #3B82F6);
       background-size: 400% 400%;
       animation: mesh 20s infinite;
     }
     .rainbow-text {
-      background: linear-gradient(to right, #3B82F6, #10B981, #F59E0B, #EF4444, #8B5CF6);
+      background: linear-gradient(to right, #FACC15, #10B981, #FB923C, #84CC16, #3B82F6);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-size: 200% auto;
       animation: mesh 5s linear infinite;
     }
-    .parallax-item { animation: float-parallax 12s ease-in-out infinite; }
+    .floating-mesh {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      z-index: -1;
+      opacity: 0.1;
+      animation: float-soft 12s infinite ease-in-out;
+    }
     ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: #0A0A0A; }
-    ::-webkit-scrollbar-thumb { background: linear-gradient(#3B82F6, #8B5CF6); border-radius: 10px; }
+    ::-webkit-scrollbar-track { background: #FFFFFF; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(#FACC15, #3B82F6); border-radius: 10px; }
   </style>
 </head>
 
-<body class="font-sans selection:bg-white selection:text-black overflow-x-hidden">
+<body class="font-sans selection:bg-slate-900 selection:text-white relative">
 
-  <!-- ─── BACKGROUND LAYERS ─── -->
-  <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05)_0%,transparent_50%)]"></div>
-  <div class="fixed top-0 left-0 w-full h-1 spectrum-mesh z-[100]"></div>
+  <!-- ─── MESH BLOBS ─── -->
+  <div class="floating-mesh w-[800px] h-[800px] bg-yellow-100 top-[-10%] right-[-10%]"></div>
+  <div class="floating-mesh w-[600px] h-[600px] bg-emerald-100 bottom-[-10%] left-[-10%]"></div>
+  <div class="fixed top-0 left-0 w-full h-1.5 mesh-gradient z-[100]"></div>
 
-  <!-- ─── HEADER ─── -->
-  <nav class="fixed top-8 left-1/2 -track-x-1/2 -translate-x-1/2 w-[90%] max-w-7xl z-50 glass-spectrum px-8 py-5 rounded-[2.5rem] flex items-center justify-between">
+  <!-- ─── NAV ─── -->
+  <nav class="fixed top-8 left-1/2 -translate-x-1/2 w-[92%] max-w-7xl z-50 glass-spectrum rounded-[2.5rem] px-10 py-5 flex items-center justify-between">
     <div class="flex items-center gap-4">
-      <div class="w-10 h-10 rounded-xl spectrum-mesh flex items-center justify-center shadow-xl rotate-45">
-        <i data-lucide="layout-dashboard" class="text-white w-6 h-6 -rotate-45"></i>
+      <div class="w-10 h-10 rounded-xl mesh-gradient flex items-center justify-center shadow-xl rotate-45 border border-white/50">
+        <i data-lucide="layout-grid" class="text-white w-6 h-6 -rotate-45"></i>
       </div>
-      <span class="font-heading font-black text-2xl tracking-tighter uppercase whitespace-nowrap">ECOSYSTEM <span class="rainbow-text">CORE</span></span>
+      <span class="font-heading font-black text-2xl tracking-tighter text-slate-900 uppercase">Ecosystem <span class="rainbow-text italic">Core</span></span>
     </div>
 
-    <div class="hidden lg:flex items-center gap-10 text-[10px] font-black uppercase tracking-[0.4em] text-white/40">
-      <a href="#matrix" class="hover:text-white transition-all">Capability</a>
-      <a href="#loop" class="hover:text-white transition-all">Agent Loop</a>
-      <a href="#setup" class="hover:text-white transition-all">Setup</a>
+    <div class="hidden lg:flex items-center gap-10 text-[10px] font-black uppercase tracking-[0.4em] text-slate-400">
+      <a href="#matrix" class="hover:text-slate-900 transition-all">Matrix</a>
+      <a href="#loop" class="hover:text-slate-900 transition-all">The Loop</a>
+      <a href="#setup" class="hover:text-slate-900 transition-all">Setup</a>
     </div>
 
     <div class="flex items-center gap-6">
-      <div class="flex flex-col items-end leading-none hidden sm:flex">
-        <span class="text-[9px] font-mono text-white/30 uppercase tracking-[0.1em]">Lead Architect</span>
-        <span class="text-xs font-heading font-bold uppercase text-hub-primary tracking-tighter">Kazi Musharraf</span>
+      <div class="hidden sm:block text-right leading-none">
+        <p class="text-[8px] font-mono text-slate-300 uppercase tracking-[0.2em] mb-1">Lead Architect</p>
+        <p class="text-xs font-heading font-black text-slate-900 uppercase tracking-tighter">Kazi Musharraf</p>
       </div>
-      <a href="https://github.com/mk-knight23" target="_blank" class="w-12 h-12 glass-spectrum rounded-2xl flex items-center justify-center hover:bg-white/10 transition-all border border-white/10">
-        <i data-lucide="github" class="w-6 h-6"></i>
+      <a href="https://github.com/mk-knight23" target="_blank" class="w-12 h-12 glass-spectrum rounded-2xl flex items-center justify-center hover:bg-slate-50 transition-all group">
+        <i data-lucide="github" class="w-6 h-6 text-slate-300 group-hover:text-slate-900 transition-colors"></i>
       </a>
     </div>
   </nav>
@@ -116,202 +121,170 @@
   <!-- ─── HERO ─── -->
   <section class="pt-64 pb-32 px-6">
     <div class="max-w-6xl mx-auto flex flex-col items-center text-center">
-      <div class="px-5 py-2 rounded-full glass-spectrum mb-10 border border-white/5 flex items-center gap-3">
-        <div class="w-2 h-2 rounded-full spectrum-mesh animate-ping"></div>
-        <span class="text-[10px] font-mono font-bold tracking-[0.4em] text-white/60">SYSTEM STATUS: HARMONIZED</span>
+      <div class="px-6 py-2 rounded-full glass-spectrum mb-12 border border-slate-100 italic">
+        <span class="text-[10px] font-mono font-black tracking-[0.5em] text-slate-900 uppercase">Unified Command Deck | v4.0</span>
       </div>
       
-      <h1 class="text-6xl md:text-[8rem] font-heading font-black leading-[0.85] tracking-tighter uppercase mb-12">
-        Unified <br> <span class="rainbow-text italic">Command.</span>
+      <h1 class="text-6xl md:text-[8.5rem] font-heading font-black text-slate-900 leading-[0.85] tracking-tighter uppercase mb-12">
+        Command <br> <span class="rainbow-text italic">The Spectrum.</span>
       </h1>
       
-      <p class="max-w-3xl text-xl md:text-2xl text-white/40 font-light leading-snug mb-20 italic">
-        The master orchestrator for the world's most advanced agentic ecosystem. Seamlessly bridge the gap between planning, execution, and security. Engineered by <span class="text-white font-black">Kazi Musharraf</span>.
+      <p class="max-w-3xl text-xl md:text-3xl text-slate-400 font-light leading-relaxed mb-20">
+        The master orchestrator for a high-reasoning agentic future. Pure whitespace, vibrant colors, and zero friction. Engineered by <span class="text-slate-900 font-bold border-b-4 border-slate-100">Kazi Musharraf</span>.
       </p>
 
-      <div class="flex flex-wrap items-center justify-center gap-10 mb-20">
-        <a href="#matrix" class="spectrum-mesh px-12 py-6 rounded-3xl font-black text-xl hover:scale-105 transition-all shadow-[0_0_60px_rgba(59,130,246,0.2)] uppercase italic">
-          Access Matrix
+      <div class="flex flex-wrap items-center justify-center gap-10 mb-32">
+        <a href="#setup" class="mesh-gradient text-white px-14 py-7 rounded-[2.5rem] font-black text-2xl hover:scale-105 transition-all shadow-[0_20px_60px_rgba(0,0,0,0.1)] uppercase italic border border-white/20">
+          Launch Hub
         </a>
-        <a href="#loop" class="text-white font-black text-xl italic flex items-center gap-4 group">
-          Watch The Loop <i data-lucide="arrow-right" class="w-6 h-6 group-hover:translate-x-2 transition-transform"></i>
+        <a href="#matrix" class="text-slate-900 font-black text-xl flex items-center gap-4 group italic px-6">
+          Access Matrix <i data-lucide="arrow-right" class="w-8 h-8 group-hover:translate-x-2 transition-transform"></i>
         </a>
       </div>
     </div>
   </section>
 
   <!-- ─── CAPABILITY MATRIX ─── -->
-  <section id="matrix" class="py-32 px-6 bg-white/[0.02]">
+  <section id="matrix" class="py-32 px-6 bg-slate-50/50">
     <div class="max-w-7xl mx-auto">
-      <div class="mb-24 flex flex-col items-center text-center">
-        <h2 class="text-[10px] font-mono font-bold tracking-[0.6em] text-hub-accent uppercase mb-6 italic">The Capability Spectrum</h2>
-        <h3 class="text-4xl md:text-6xl font-heading font-black text-white mb-8">Ecosystem Architecture.</h3>
-      </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Antigravity -->
+        <div class="glass-spectrum p-12 rounded-[4rem] hover:shadow-2xl transition-all border-b-4 border-hub-active group">
+          <i data-lucide="zap" class="text-hub-active w-10 h-10 mb-8 group-hover:scale-110 transition-transform"></i>
+          <h4 class="text-2xl font-heading font-black text-slate-900 mb-4 tracking-tighter uppercase italic">ANTIGRAVITY</h4>
+          <p class="text-sm text-slate-400 font-light leading-relaxed italic mb-8">Command deck for energetic multi-agent orchestration.</p>
+          <div class="text-[9px] font-mono font-black uppercase text-hub-active">Tier 1: Control</div>
+        </div>
+
         <!-- Claude -->
-        <div class="glass-spectrum p-10 rounded-[3rem] border-t-4 border-hub-warning card-hover transition-all">
-          <div class="flex items-center gap-4 mb-8">
-            <i data-lucide="zap" class="text-hub-warning w-8 h-8"></i>
-            <h4 class="font-heading font-black text-2xl uppercase italic">CLAUDE</h4>
-          </div>
-          <p class="text-white/40 font-light text-sm italic mb-6">High-reasoning agent loops and lifecycle hooks. The strategic brain of the software factory.</p>
-          <div class="text-[9px] font-mono font-bold tracking-widest text-hub-warning uppercase mt-auto">Logic Layer</div>
+        <div class="glass-spectrum p-12 rounded-[4rem] hover:shadow-2xl transition-all border-b-4 border-hub-thinking group">
+          <i data-lucide="brain" class="text-hub-thinking w-10 h-10 mb-8 group-hover:scale-110 transition-transform"></i>
+          <h4 class="text-2xl font-heading font-black text-slate-900 mb-4 tracking-tighter uppercase italic">CLAUDE</h4>
+          <p class="text-sm text-slate-400 font-light leading-relaxed italic mb-8">Humanist reasoning engine for complex logic loops.</p>
+          <div class="text-[9px] font-mono font-black uppercase text-hub-thinking">Tier 2: Logic</div>
         </div>
 
         <!-- Cursor -->
-        <div class="glass-spectrum p-10 rounded-[3rem] border-t-4 border-hub-accent card-hover transition-all">
-          <div class="flex items-center gap-4 mb-8">
-            <i data-lucide="sparkles" class="text-hub-accent w-8 h-8"></i>
-            <h4 class="font-heading font-black text-2xl uppercase italic">CURSOR</h4>
-          </div>
-          <p class="text-white/40 font-light text-sm italic mb-6">Semantic inline editing and background agents. The ultimate real-time feature-building interface.</p>
-          <div class="text-[9px] font-mono font-bold tracking-widest text-hub-accent uppercase mt-auto">Editor Tier</div>
-        </div>
-
-        <!-- Opencode -->
-        <div class="glass-spectrum p-10 rounded-[3rem] border-t-4 border-hub-secondary card-hover transition-all">
-          <div class="flex items-center gap-4 mb-8">
-            <i data-lucide="terminal" class="text-hub-secondary w-8 h-8"></i>
-            <h4 class="font-heading font-black text-2xl uppercase italic">OPENCODE</h4>
-          </div>
-          <p class="text-white/40 font-light text-sm italic mb-6">Zero-cost execution using open-source models. The high-velocity engine for repetitive mechanical tasks.</p>
-          <div class="text-[9px] font-mono font-bold tracking-widest text-hub-secondary uppercase mt-auto">Mechanical Engine</div>
-        </div>
-
-        <!-- Antigravity -->
-        <div class="glass-spectrum p-10 rounded-[3rem] border-t-4 border-hub-primary card-hover transition-all">
-          <div class="flex items-center gap-4 mb-8">
-            <i data-lucide="command" class="text-hub-primary w-8 h-8"></i>
-            <h4 class="font-heading font-black text-2xl uppercase italic">ANTIGRAVITY</h4>
-          </div>
-          <p class="text-white/40 font-light text-sm italic mb-6">Cross-surface orchestration across browser, terminal, and editor. High-level manager surface.</p>
-          <div class="text-[9px] font-mono font-bold tracking-widest text-hub-primary uppercase mt-auto">Management Deck</div>
+        <div class="glass-spectrum p-12 rounded-[4rem] hover:shadow-2xl transition-all border-b-4 border-hub-craft group">
+          <i data-lucide="edit-3" class="text-hub-craft w-10 h-10 mb-8 group-hover:scale-110 transition-transform"></i>
+          <h4 class="text-2xl font-heading font-black text-slate-900 mb-4 tracking-tighter uppercase italic">CURSOR</h4>
+          <p class="text-sm text-slate-400 font-light leading-relaxed italic mb-8">Premium semantic editing with artisanal focus.</p>
+          <div class="text-[9px] font-mono font-black uppercase text-hub-craft">Tier 3: Craft</div>
         </div>
 
         <!-- Copilot -->
-        <div class="glass-spectrum p-10 rounded-[3rem] border-t-4 border-white/20 card-hover transition-all">
-          <div class="flex items-center gap-4 mb-8">
-            <i data-lucide="github" class="text-white w-8 h-8"></i>
-            <h4 class="font-heading font-black text-2xl uppercase italic">COPILOT</h4>
-          </div>
-          <p class="text-white/40 font-light text-sm italic mb-6">Enterprise-grade security reviewer and bug identifier. 60 million PR reviews worth of intelligence.</p>
-          <div class="text-[9px] font-mono font-bold tracking-widest text-white/30 uppercase mt-auto">Security Sentinel</div>
+        <div class="glass-spectrum p-12 rounded-[4rem] hover:shadow-2xl transition-all border-b-4 border-hub-verify group">
+          <i data-lucide="github" class="text-hub-verify w-10 h-10 mb-8 group-hover:scale-110 transition-transform"></i>
+          <h4 class="text-2xl font-heading font-black text-slate-900 mb-4 tracking-tighter uppercase italic">COPILOT</h4>
+          <p class="text-sm text-slate-400 font-light leading-relaxed italic mb-8">Industrial security auditing and PR governance.</p>
+          <div class="text-[9px] font-mono font-black uppercase text-hub-verify">Tier 4: Audit</div>
+        </div>
+
+        <!-- Opencode -->
+        <div class="glass-spectrum p-12 rounded-[4rem] hover:shadow-2xl transition-all border-b-4 border-hub-raw group">
+          <i data-lucide="terminal" class="text-hub-raw w-10 h-10 mb-8 group-hover:scale-110 transition-transform"></i>
+          <h4 class="text-2xl font-heading font-black text-slate-900 mb-4 tracking-tighter uppercase italic">OPENCODE</h4>
+          <p class="text-sm text-slate-400 font-light leading-relaxed italic mb-8">Zero-cost mechanical execution for repetitive tasks.</p>
+          <div class="text-[9px] font-mono font-black uppercase text-hub-raw">Tier 5: Execution</div>
         </div>
 
         <!-- Hub -->
-        <div class="glass-spectrum p-10 rounded-[3rem] border-b-4 border-white bento-glow transition-all">
-          <div class="flex items-center gap-4 mb-8">
-            <i data-lucide="globe" class="text-white w-8 h-8"></i>
-            <h4 class="font-heading font-black text-2xl uppercase italic">CORE</h4>
-          </div>
-          <p class="text-white/60 font-light text-sm italic mb-6">The central truth engine. Policy enforcement, standardized parity, and cross-repo synchronization.</p>
-          <div class="text-[9px] font-mono font-bold tracking-widest text-white uppercase mt-auto">Master Orchestrator</div>
+        <div class="glass-spectrum p-12 rounded-[4rem] hover:shadow-2xl transition-all mesh-gradient text-white border-0 group">
+          <i data-lucide="layout-dashboard" class="text-white w-10 h-10 mb-8 group-hover:rotate-45 transition-transform duration-1000"></i>
+          <h4 class="text-2xl font-heading font-black mb-4 tracking-tighter uppercase italic">CORE</h4>
+          <p class="text-white/70 text-sm font-light leading-relaxed italic mb-8">The central truth engine and standardized parity hub.</p>
+          <div class="text-[9px] font-mono font-black uppercase text-white">Universal Layer</div>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- ─── THE LOOP ─── -->
-  <section id="loop" class="py-32 px-6">
-    <div class="max-w-5xl mx-auto flex flex-col items-center gap-16">
-      <div class="text-center">
-        <h3 class="text-4xl md:text-5xl font-heading font-black text-white mb-8">The Hybrid Iteration.</h3>
-        <p class="max-w-2xl text-white/40 font-light text-lg italic">Experience the 4-stage loop that defines 2026 engineering excellence.</p>
-      </div>
+  <section id="loop" class="py-48 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-5xl md:text-7xl font-heading font-black text-slate-900 mb-16 tracking-tighter uppercase italic">The Hybrid Iteration.</h3>
       
-      <div class="w-full flex flex-col md:flex-row items-center justify-between gap-8 relative">
-        <div class="absolute inset-x-0 top-1/2 h-0.5 spectrum-mesh opacity-20 hidden md:block"></div>
-        
-        <div class="z-10 flex flex-col items-center gap-4 text-center">
-          <div class="w-20 h-20 rounded-full glass-spectrum border border-hub-warning flex items-center justify-center shadow-lg shadow-hub-warning/20">
-            <i data-lucide="brain" class="text-hub-warning w-8 h-8"></i>
+      <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-20">
+        <div class="flex flex-col items-center gap-6">
+          <div class="w-24 h-24 rounded-full glass-spectrum border border-hub-active flex items-center justify-center shadow-lg shadow-yellow-100">
+            <i data-lucide="brain" class="text-hub-active w-8 h-8"></i>
           </div>
-          <span class="text-[10px] font-black uppercase tracking-widest">1. Strategy</span>
+          <span class="text-[10px] font-black uppercase tracking-widest text-slate-400">1. Strategy</span>
         </div>
-
-        <div class="z-10 flex flex-col items-center gap-4 text-center">
-          <div class="w-20 h-20 rounded-full glass-spectrum border border-hub-accent flex items-center justify-center shadow-lg shadow-hub-accent/20">
-            <i data-lucide="code-2" class="text-hub-accent w-8 h-8"></i>
+        <div class="hidden md:block w-12 h-0.5 bg-slate-100"></div>
+        <div class="flex flex-col items-center gap-6">
+          <div class="w-24 h-24 rounded-full glass-spectrum border border-hub-thinking flex items-center justify-center shadow-lg shadow-emerald-100">
+            <i data-lucide="code-2" class="text-hub-thinking w-8 h-8"></i>
           </div>
-          <span class="text-[10px] font-black uppercase tracking-widest">2. Execution</span>
+          <span class="text-[10px] font-black uppercase tracking-widest text-slate-400">2. Execution</span>
         </div>
-
-        <div class="z-10 flex flex-col items-center gap-4 text-center">
-          <div class="w-20 h-20 rounded-full glass-spectrum border border-hub-primary flex items-center justify-center shadow-lg shadow-hub-primary/20">
-            <i data-lucide="shield-check" class="text-hub-primary w-8 h-8"></i>
+        <div class="hidden md:block w-12 h-0.5 bg-slate-100"></div>
+        <div class="flex flex-col items-center gap-6">
+          <div class="w-24 h-24 rounded-full glass-spectrum border border-hub-verify flex items-center justify-center shadow-lg shadow-lime-100">
+            <i data-lucide="shield-check" class="text-hub-verify w-8 h-8"></i>
           </div>
-          <span class="text-[10px] font-black uppercase tracking-widest">3. Audit</span>
-        </div>
-
-        <div class="z-10 flex flex-col items-center gap-4 text-center">
-          <div class="w-20 h-20 rounded-full glass-spectrum border border-white flex items-center justify-center shadow-lg shadow-white/20">
-            <i data-lucide="eye" class="text-white w-8 h-8"></i>
-          </div>
-          <span class="text-[10px] font-black uppercase tracking-widest">4. Verify</span>
+          <span class="text-[10px] font-black uppercase tracking-widest text-slate-400">3. Verify</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ─── SETUP ─── -->
-  <section id="setup" class="py-48 px-6 text-center">
-    <div class="max-w-4xl mx-auto">
-      <h3 class="text-4xl md:text-8xl font-heading font-black mb-16 tracking-tighter uppercase whitespace-nowrap">Scale Your <span class="rainbow-text px-4">Genius.</span></h3>
+  <section id="setup" class="py-32 px-6 border-t border-slate-100">
+    <div class="max-w-4xl mx-auto flex flex-col items-center text-center">
+      <h3 class="text-5xl md:text-8xl font-heading font-black text-slate-900 mb-16 tracking-tighter uppercase italic">Scale Your <span class="rainbow-text">Genius.</span></h3>
       
-      <div class="glass-spectrum p-4 rounded-[2.5rem] mb-16 border border-white/10 relative overflow-hidden group">
-        <div class="absolute inset-0 spectrum-mesh opacity-0 group-hover:opacity-10 transition-all"></div>
-        <div class="flex flex-col md:flex-row items-center gap-6 p-4">
-          <div class="flex-1 text-left font-mono py-4 px-8 text-white/80 overflow-x-auto whitespace-nowrap scrollbar-hide text-xl">
-            ./scripts/init-ecosystem.sh --all
-          </div>
-          <button class="spectrum-mesh text-white px-12 py-5 rounded-2xl font-black transition-all flex items-center gap-3">
-            <i data-lucide="zap" class="w-6 h-6"></i> Initialize
-          </button>
+      <div class="w-full glass-spectrum p-4 rounded-[3.5rem] mb-16 flex flex-col md:flex-row items-center gap-6 group overflow-hidden border border-slate-100/50">
+        <div class="absolute inset-0 mesh-gradient opacity-0 group-hover:opacity-5 transition-all"></div>
+        <div class="flex-1 font-mono text-2xl py-8 px-12 text-slate-900 overflow-x-auto whitespace-nowrap scrollbar-hide text-left italic">
+          ./scripts/init-ecosystem.sh --all
         </div>
+        <button class="mesh-gradient text-white px-16 py-8 rounded-[2.5rem] font-black text-2xl shadow-2xl transition-all hover:scale-105 active:scale-95 uppercase italic">
+          Boot Hub
+        </button>
       </div>
 
-      <div class="flex flex-wrap justify-center gap-10 text-[11px] font-black tracking-[0.4em] text-white/20 uppercase italic">
-        <div class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-hub-primary"></i> 6 Integrated Repos</div>
-        <div class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-hub-secondary"></i> Zero Latency</div>
-        <div class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-hub-accent"></i> Master Parity</div>
+      <div class="flex flex-wrap justify-center gap-12 text-[10px] font-black tracking-[0.6em] text-slate-400 italic">
+        <div class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-hub-active"></i> All-In-One</div>
+        <div class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-hub-thinking"></i> Zero Overhead</div>
+        <div class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-hub-verify"></i> Elite Parity</div>
       </div>
     </div>
   </section>
 
   <!-- ─── FOOTER ─── -->
-  <footer class="py-32 px-6 border-t border-white/10 bg-black relative">
+  <footer class="py-24 px-6 border-t border-slate-100 bg-white relative">
     <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-end gap-20">
-      <div class="text-center lg:text-left space-y-8">
-        <div class="flex items-center justify-center lg:justify-start gap-4 mb-4">
-          <div class="w-10 h-10 rounded-xl spectrum-mesh flex items-center justify-center rotate-45 shadow-2xl">
-            <i data-lucide="layout-dashboard" class="text-white w-6 h-6 -rotate-45"></i>
-          </div>
-          <span class="font-heading font-black text-3xl text-white tracking-widest uppercase italic">ECOSYSTEM</span>
+      <div class="text-center lg:text-left">
+        <div class="flex items-center justify-center lg:justify-start gap-4 mb-8">
+          <div class="w-12 h-12 rounded-xl mesh-gradient flex items-center justify-center rotate-45 shadow-xl"><i data-lucide="layout-grid" class="w-6 h-6 text-white -rotate-45"></i></div>
+          <span class="font-heading font-black text-3xl text-slate-900 tracking-widest uppercase italic leading-none">ECOSYSTEM</span>
         </div>
-        <p class="text-xs font-light max-w-sm text-white/30 italic">The definitive hub for autonomous software engineering pipelines. Orchestrating the next era of development efficiency.</p>
-        <div class="pt-8 flex flex-col lg:flex-row items-center gap-8">
-            <div class="px-5 py-2 glass-spectrum rounded-full italic text-[10px] font-black text-hub-primary uppercase tracking-[0.2em] border border-hub-primary/30">Lead Architect: Kazi Musharraf</div>
-            <div class="px-5 py-2 glass-spectrum rounded-full italic text-[10px] font-black text-hub-secondary uppercase tracking-[0.2em] border border-hub-secondary/30">Stable Release: April 2026</div>
+        <p class="text-[10px] text-slate-300 font-bold uppercase tracking-[0.8em] mb-4 italic">Unified Command Infrastructure</p>
+        <p class="text-xs text-slate-400 font-light max-w-xs italic italic">The definitive hub for autonomous software engineering. Orchestrating the future of high-reasoning agentic loops.</p>
+        <div class="pt-10 flex gap-4">
+            <div class="px-5 py-2 glass-spectrum rounded-full text-[9px] font-black uppercase text-hub-active border border-hub-active/20 tracking-widest italic">Stable Release: 4.0.0</div>
+            <div class="px-5 py-2 glass-spectrum rounded-full text-[9px] font-black uppercase text-hub-thinking border border-hub-thinking/20 tracking-widest italic">Status: Online</div>
         </div>
       </div>
 
       <div class="flex flex-col items-center lg:items-end">
         <div class="flex gap-12 mb-12">
-          <a href="#" class="text-white/20 hover:text-white transition-all scale-150"><i data-lucide="twitter" class="w-6 h-6"></i></a>
-          <a href="https://github.com/mk-knight23" class="text-white/20 hover:text-white transition-all scale-150"><i data-lucide="github" class="w-6 h-6"></i></a>
-          <a href="#" class="text-white/20 hover:text-white transition-all scale-150"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+          <a href="#" class="text-slate-200 hover:text-slate-900 transition-all scale-150"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+          <a href="https://github.com/mk-knight23" class="text-slate-200 hover:text-slate-900 transition-all scale-150"><i data-lucide="github" class="w-6 h-6"></i></a>
+          <a href="#" class="text-slate-200 hover:text-slate-900 transition-all scale-150"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
         </div>
         <div class="text-right">
-            <p class="text-[10px] uppercase tracking-[0.8em] font-heading font-black text-white/10 mb-2">Designed Expressly For</p>
-            <p class="text-xl font-heading font-black text-white tracking-[0.2em] uppercase italic">mk-knight23</p>
+            <p class="text-[10px] uppercase tracking-[0.8em] font-heading font-black text-slate-200 mb-2">Architected By</p>
+            <p class="text-3xl font-heading font-black text-slate-900 tracking-[0.1em] uppercase italic">KAZI MUSHARRAF</p>
         </div>
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto mt-32 pt-12 border-t border-white/5 flex justify-between items-center text-[10px] font-mono text-white/20 uppercase tracking-[0.2em]">
-        <span>&copy; 2026 AI Assistant Ecosystem. Hub Version 4.0.0</span>
-        <span class="italic">All core protocols established. Parity Verified.</span>
+    <div class="max-w-7xl mx-auto mt-24 pt-12 border-t border-slate-50 text-[10px] font-mono text-slate-200 text-center uppercase tracking-[0.5em] italic">
+        &copy; 2026 AI Assistant Core. Global Parity Verified.
     </div>
   </footer>
 
@@ -326,8 +299,8 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.glass-spectrum, h1, h3').forEach(el => {
-      el.classList.add('transition-all', 'duration-[1500ms]', 'opacity-0', 'translate-y-20');
+    document.querySelectorAll('.glass-spectrum, h1, h3, #matrix > div').forEach(el => {
+      el.classList.add('transition-all', 'duration-[2000ms]', 'opacity-0', 'translate-y-20');
       observer.observe(el);
     });
   </script>
